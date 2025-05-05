@@ -31,8 +31,12 @@ public abstract class Projectiles
     public abstract void Move();
 
 
-    public virtual void Hit()
+    public virtual void Hit(GameObject gameObject)
     {
+        
+     
+     
+
 
     }
 
