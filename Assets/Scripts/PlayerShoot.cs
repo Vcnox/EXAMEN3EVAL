@@ -7,28 +7,19 @@ public class PlayerShoot : MonoBehaviour
     public float timeToShoot = 0.4f;
     public GameObject projectiles;
 
+
+
+
     private float currentTime = 0;
 
-    public ProjectileType projectileType;
-    private Projectiles Projectiles;
+   
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        switch (projectileType)
-        {
-            case ProjectileType.ARROW:
-                projectiles = new Arrow(25, 30);
-                break;
-            case ProjectileType.ICEARROW:
-                projectiles = new IceArrow(10, 15);
-                break;
-            case ProjectileType.BOOMERANG:
-                projectiles = new Boomerang(8, 10);
-                break;
-        }
+      
 
     }
 
@@ -39,7 +30,7 @@ public class PlayerShoot : MonoBehaviour
 
         if (currentTime > timeToShoot && Input.GetMouseButton(0))
         {
-
+            
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
