@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract  class Projectile
+public enum ProjectileType { ICEARROW, ARROW, BOOMERANG }
+
+public abstract class Projectiles
 {
     protected float speed;
     protected float damage;
@@ -11,7 +13,7 @@ public abstract  class Projectile
     private Sprite _sprite;
 
 
-    public Projectile(float damage, float speed, Rigidbody2D _rb2D, Sprite _sprite)
+    public Projectiles(float damage, float speed, Rigidbody2D _rb2D, Sprite _sprite)
     {
 
         this.damage = damage;
@@ -22,16 +24,16 @@ public abstract  class Projectile
     }
 
     public Sprite GetSprite()
-    { 
-        return _sprite; 
+    {
+        return _sprite;
     }
 
     public abstract void Move();
 
 
-    public virtual void Hit(GameObject IceArrow)
+    public virtual void Hit()
     {
 
     }
-    
+
 }
